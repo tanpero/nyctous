@@ -10,7 +10,7 @@ It is completely based on source code hierarchy for project dependency managemen
 
 ## How to build itself
 
-```bash
+```
 $ git clone https://github.com/tanpero/nyctous.git # Or SSH path
 $ cd nyctous
 $ cmake .
@@ -24,7 +24,7 @@ Then `make` (On *nix) or `start nyctous.sln` (On Windows)
 
 Use `ny init`.
 
-```bash
+```
 $ mkdir hello && cd hello
 $ ny init
 Project Name (hello): <Enter your answer>
@@ -42,7 +42,7 @@ CMakeLists.txt  LICENSE  README.md  deps/  docs/  include/  nyctous.json  src/  
 
 ### Install the dependencies
 
-```bash
+```
 $ ny add nlohmann/json
 $ ny add fmtlib/fmt
 ```
@@ -51,7 +51,7 @@ $ ny add fmtlib/fmt
 
 For Nyctous, a "project" does not mean an output object, but a collection of interconnected workflows. It will include several targets.
 
-```bash
+```
 $ ny build
 ```
 
@@ -59,8 +59,14 @@ $ ny build
 
 If you have written code for examples or tests and specified a test script in nyctous.json, then all you need to do is
 
-```bash
+```
 $ ny test
+```
+
+### Packaging and release the application
+
+```
+$ ny pack
 ```
 
 Then you will see a beautiful test report (for the test project) or expected application output (for the example project) on the terminal.

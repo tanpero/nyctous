@@ -1,0 +1,42 @@
+{
+  "projectName": "MyCppProject",
+  "version": "1.0.0",
+  "description": "A sample C++ project",
+  "author": "Your Name",
+  "license": "MIT",
+  "buildSystem": "CMake",
+  "cppStandard": "C++17",
+  "objects": [
+    {
+        "name": "lib-1",
+        "type": "static",
+        "header": ["include", "3rd_party/json/single_header/"],
+        "source": ["src/a/a.cc", "src/b"]
+    },
+    {        
+        "name": "lib-2",
+        "type": "dynamic",
+        "header": ["include", "3rd_party/json/single_header/"],
+        "source": ["src/a/a.cc", "src/b"]
+    },
+    {
+        "name": "app-1",
+        "type": "executable",
+        "header": ["include"],
+        "source": ["example/app-1.cc"]
+    }
+  ],
+  "dependencies": {
+    "gtest": "^1.10.0",
+    "boost": "^1.76.0"
+  },
+  "dependencyDirectories": ["third_party"],
+  "cmakeOptions": [
+    "-DCMAKE_VERBOSE_MAKEFILE=ON"
+  ],
+  "scripts": {
+    "prebuild": "echo Running prebuild tasks",
+    "postbuild": "echo Running postbuild tasks"
+  }
+}
+

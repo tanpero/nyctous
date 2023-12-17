@@ -52,7 +52,7 @@ $ ny add fmtlib/fmt
 For Nyctous, a "project" does not mean an output object, but a collection of interconnected workflows. It will include several targets.
 
 ```bash
-$ nyctous build
+$ ny build
 ```
 
 ### Test the project
@@ -60,7 +60,7 @@ $ nyctous build
 If you have written code for examples or tests and specified a test script in nyctous.json, then all you need to do is
 
 ```bash
-$ nyctous test
+$ ny test
 ```
 
 Then you will see a beautiful test report (for the test project) or expected application output (for the example project) on the terminal.
